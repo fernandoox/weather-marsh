@@ -15,6 +15,7 @@ export class UsCapitalsService {
     'X-Parse-Application-Id': '6a2NWTwXRlwc1BynCf46kYZG1VeWp170GYjZIeXK',
     'X-Parse-Master-Key': 'WEYdiGWSz0gt91skfDe03wX9yqikQTpiVc9Vn2An',
   });
+  // 86ee6195cd94ccba14bc2f08776b1ea9
 
   getCapitals(): Observable<ResponseApiCapitals> {
     return this.http

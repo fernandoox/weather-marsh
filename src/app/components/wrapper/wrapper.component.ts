@@ -12,7 +12,6 @@ export class WrapperComponent {
   constructor(private service: UsCapitalsService) {}
 
   ngOnInit(): void {
-    console.log('Hola');
     this.getCapitals();
   }
 
