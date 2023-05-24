@@ -1,0 +1,14 @@
+<section class="weather-more-info">
+  <div>
+    <p><strong>Low / High:</strong></p>
+    {{ weatherInfo.main?.temp_min }}°C / {{ weatherInfo.main?.temp_max }}°C
+  </div>
+  <div>
+    <p><strong>Humidity:</strong></p>
+    {{ weatherInfo.main?.humidity }}%
+  </div>
+  <div>
+    <p><strong>Feels like:</strong></p>
+    {{ weatherInfo.main?.feels_like }}°C
+  </div>
+</section>

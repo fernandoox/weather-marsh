@@ -1,5 +1,7 @@
 <div class="container">
-  <ul *ngFor="let capital of capitals">
+  <app-temperature-legends></app-temperature-legends>
+
+  <ul *ngFor="let capital of capitals" style="margin-top: 80px">
     <app-city-card [capital]="capital"></app-city-card>
   </ul>
 </div>

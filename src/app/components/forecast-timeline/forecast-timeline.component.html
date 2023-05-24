@@ -1,0 +1,19 @@
+<p-accordion>
+  <p-accordionTab header="Forecast">
+    <p-timeline [value]="forecastInfo.list">
+      <ng-template pTemplate="opposite" let-forecast>
+        <small class="p-text-secondary">{{ forecast.dt_txt }}</small>
+      </ng-template>
+      <ng-template pTemplate="content" let-forecast>
+        <div style="display: flex; align-items: center">
+          <img
+            src="http://openweathermap.org/img/wn/{{
+              forecast.weather?.at(0)?.icon
+            }}.png"
+          />
+          <small class="p-text-secondary">{{ forecast.main?.temp }}°C</small>
+        </div>
+      </ng-template>
+    </p-timeline>
+  </p-accordionTab>
+</p-accordion>
