@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### https://weather-marsh.vercel.app/
 
+![image](https://github.com/fernandoox/weather-marsh/assets/43055981/0778654b-a763-4197-abb3-62b4a48d059a)
+
 ## 🌤️ Weather API
 
 You can review the documentation for the [OpenWeatherMap API](https://openweathermap.org/api) at any time.
@@ -27,3 +29,5 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ### Dependencies
 
 I used [PrimeNG](https://primeng.org/) for the components like card, timeline, accordion, etc
+
+
