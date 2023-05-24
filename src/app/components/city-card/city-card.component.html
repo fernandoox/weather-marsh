@@ -1,3 +1,50 @@
-<div class="card flex justify-content-center">
-  <p-button label="Check" icon="pi pi-check"></p-button>
+<div *ngIf="forecastInfo && weatherInfo" class="weather-card">
+  <p-card>
+    <ng-template pTemplate="content">
+      <div class="weather-details">
+        <div class="weather-img">
+          <img
+            src="http://openweathermap.org/img/wn/{{
+              weatherInfo.weather?.at(0)?.icon
+            }}@2x.png"
+          />
+        </div>
+
+        <div>
+          <h3>
+            <strong>{{ forecastInfo.city?.name }}, {{ capital.state }}</strong>
+          </h3>
+          <span>{{ weatherInfo.main?.temp }}°C</span>
+          <span>{{ weatherInfo.weather?.at(0)?.description }}</span>
+        </div>
+      </div>
+      <section class="weather-more-info">
+        <div>
+          <p><strong>Low / High:</strong></p>
+          {{ weatherInfo.main?.temp_min }}°C /
+          {{ weatherInfo.main?.temp_max }}°C
+        </div>
+        <div>
+          <p><strong>Humidity:</strong></p>
+          {{ weatherInfo.main?.humidity }}%
+        </div>
+        <div>
+          <p><strong>Feels like:</strong></p>
+          {{ weatherInfo.main?.feels_like }}°C
+        </div>
+      </section>
+
+      <p-accordion>
+        <p-accordionTab header="Forecast">
+          <ul>
+            <li *ngFor="let forecast of forecastInfo.list">
+              <strong>{{ forecast.dt_txt }}</strong>
+              {{ forecast.main?.temp }}°C
+              {{ forecast.weather?.at(0)?.description }}
+            </li>
+          </ul>
+        </p-accordionTab>
+      </p-accordion>
+    </ng-template>
+  </p-card>
 </div>

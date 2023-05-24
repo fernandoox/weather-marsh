@@ -1,10 +1,5 @@
-<app-city-card></app-city-card>
-<ul *ngFor="let capital of capitals">
-  {{
-    capital.state.name
-  }}
-  -
-  {{
-    capital.capital
-  }}
-</ul>
+<div class="container">
+  <ul *ngFor="let capital of capitals">
+    <app-city-card [capital]="capital"></app-city-card>
+  </ul>
+</div>

@@ -7,6 +7,8 @@ import { CityCardComponent } from './components/city-card/city-card.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { AccordionModule } from 'primeng/accordion';
 
 @NgModule({
   declarations: [AppComponent, CityCardComponent, WrapperComponent],
@@ -15,6 +17,8 @@ import { ButtonModule } from 'primeng/button';
     HttpClientModule,
     BrowserAnimationsModule,
     ButtonModule,
+    CardModule,
+    AccordionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

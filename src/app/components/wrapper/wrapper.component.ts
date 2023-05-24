@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { UsCapitalsService } from '../../services/us-capitals.service';
 import { Capital } from '../../interfaces/USInterface';
+import { capitalsData } from 'src/app/consts/capitals';
 
 @Component({
   selector: 'app-wrapper',
@@ -8,16 +8,5 @@ import { Capital } from '../../interfaces/USInterface';
   styleUrls: ['./wrapper.component.scss'],
 })
 export class WrapperComponent {
-  capitals: Capital[] = [];
-  constructor(private service: UsCapitalsService) {}
-
-  ngOnInit(): void {
-    this.getCapitals();
-  }
-
-  getCapitals(): void {
-    this.service
-      .getCapitals()
-      .subscribe(({ results }) => (this.capitals = results));
-  }
+  capitals: Capital[] = capitalsData;
 }
